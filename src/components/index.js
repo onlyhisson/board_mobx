@@ -1,0 +1,6 @@
+export { default as Header } from './Header'
+export { default as Footer } from './Footer'
+export { default as MainImage } from './MainImage'
+export { default as Post } from './Post'
+export { default as PostDetail } from './PostDetail'
+export { default as PostList } from './PostList'

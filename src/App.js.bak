@@ -1,0 +1,27 @@
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Home, About, User } from './pages' 
+import 'semantic-ui-css/semantic.min.css'
+
+class App extends Component {
+  state = { activeItem: 'home' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+    return (
+      <Router>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/user">User</Link>
+
+        <Route exact path='/' component={Home}/>
+        <Route path='/about' component={About}/>
+        <Route path='/user/:name' component={User}/>
+      </Router>
+    );
+  }
+}
+
+export default App;

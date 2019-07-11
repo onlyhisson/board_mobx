@@ -1,0 +1,5 @@
+export { default as About } from './About'
+export { default as Board } from './Board'
+export { default as Images } from './Images'
+export { default as Login } from './Login'
+export { default as NoMatch } from './NoMatch'
